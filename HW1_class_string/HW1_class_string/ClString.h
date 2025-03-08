@@ -17,7 +17,7 @@ public:
 	explicit String(int nstr, char c = ' ');
 	String(const char* s);
 	String(const String& S);
-	String(String&& S);
+	String(String&& S) noexcept;
 	~String() { delete[] str; }
 	String& operator=(const String& S);
 	String& operator=(String&& S) noexcept;

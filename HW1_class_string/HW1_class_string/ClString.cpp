@@ -20,7 +20,7 @@ String::String(const String& S) : n(S.n), str(nullptr) {
 	str[n] = '\0';
 }
 
-String::String(String&& S) : n(S.n), str(S.str) {
+String::String(String&& S) noexcept : n(S.n), str(S.str) {
 	S.n = 0;
 	S.str = nullptr;
 }

@@ -16,7 +16,7 @@ public:
 	void swap(String& other) noexcept;
 	String(const char* s);
 	String(const String& S);
-	String(String&& S) noexcept  { this->swap(S); }
+	String(String&& S) noexcept : String() { this->swap(S); }
 	~String() { delete[] str; }
 	String& operator=(String S) { this->swap(S); return (*this); }
 	char  operator[](int index) const { return str[index]; }
