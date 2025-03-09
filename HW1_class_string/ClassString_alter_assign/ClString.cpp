@@ -7,12 +7,8 @@ String::String(int nstr, char c) : n(nstr), str(nullptr) {
 }
 
 void String::swap(String& other) noexcept {
-	int t = n;
-	char* tp = str;
-	n = other.n;
-	str = other.str;
-	other.n = t;
-	other.str = tp;
+	std::swap(n, other.n);
+	std::swap(str, other.str);
 }
 
 String::String(const char* s) : n(0), str(nullptr) {
