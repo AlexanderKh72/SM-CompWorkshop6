@@ -8,6 +8,8 @@ public:
     int number() const { return id; }
     void print() { std::cout << name() << " No" << number() << "; area=" << area() << std::endl; }
 
+    virtual ~Shape() { std::cout << "~Shape\n"; }
+
 protected:
     int id;
 };
