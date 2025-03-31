@@ -1,9 +1,12 @@
 /HW1_class_string/x64/
 /HW1_class_string/.vs/
 /HW1_class_string/HW1_class_string/x64/
+/HW1_class_string/ClassString_alter_assign/x64/
 /HW2_ShapeArea/x64/
 /HW2_ShapeArea/.vs/
 /HW2_ShapeArea/HW2_ShapeArea/x64/
+/mfc_test/x64/
+/mfc_test/.vs/
+/mfc_test/mfc_test/x64/
 *.vcxproj.filters
 *.vcxproj.user
-/HW1_class_string/

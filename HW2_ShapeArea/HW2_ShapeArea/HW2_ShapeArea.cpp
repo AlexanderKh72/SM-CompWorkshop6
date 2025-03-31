@@ -13,7 +13,7 @@ const int N = 7;
 int main()
 {
     Shape* arr[N];
-    rninit(4399);
+    rninit(1308);
     for (int i = 0; i < N; ++i) {
         if (rnunif() < 0.5)
             arr[i] = new Circle(rnunif() * 10);
