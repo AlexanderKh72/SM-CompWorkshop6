@@ -15,6 +15,7 @@
 #include <propkey.h>
 
 #include "CDlgTakeover.h"
+#include "CDlgFormat.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -32,6 +33,7 @@ BEGIN_MESSAGE_MAP(CmfctestDoc, CDocument)
 	ON_COMMAND(ID_DRAW_BLUE, &CmfctestDoc::OnDrawBlue)
 	ON_COMMAND(ID_TAKEOVERTHEWORLD, &CmfctestDoc::OnTakeovertheworld)
 	ON_COMMAND(ID_DRAW, &CmfctestDoc::OnDraw)
+	ON_COMMAND(ID_FORMAT, &CmfctestDoc::OnFormat)
 END_MESSAGE_MAP()
 
 
@@ -240,6 +242,18 @@ void CmfctestDoc::OnTakeovertheworld()
 
 void CmfctestDoc::OnDraw()
 {
-	CColorDialog dlg(RGB(0, 0, 0));
+	CColorDialog dlg(clr);
+	if (dlg.DoModal() == IDOK) {
+		clr = dlg.GetColor();
+		updateclr();
+		UpdateAllViews(0);
+	}
+
+}
+
+void CmfctestDoc::OnFormat()
+{
+	// TODO: Add your command handler code here
+	CDlgFormat dlg;
 	dlg.DoModal();
 }

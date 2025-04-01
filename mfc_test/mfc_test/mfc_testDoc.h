@@ -68,4 +68,5 @@ public:
 	void updateclr();
 	afx_msg void OnTakeovertheworld();
 	afx_msg void OnDraw();
+	afx_msg void OnFormat();
 };

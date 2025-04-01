@@ -84,10 +84,16 @@
 #define IDS_EXPLORER                    305
 #define IDS_EDIT_MENU                   306
 #define IDD_DIALOG1                     310
+#define IDD_DIALOG2                     312
 #define IDC_TAKEOVER_CRAFTY             1000
 #define IDC_TAKEOVER_VERYCRAFTY         1001
 #define IDC_BUTTON_TAKEOVER             1002
 #define IDC_PASSWORD                    1003
+#define IDB_WIDTH                       1006
+#define IDC_GREEN                       1008
+#define IDC_RADIO4                      1009
+#define IDC_BLUE                        1009
+#define IDC_RED                         1010
 #define ID_FILE_NEWOPTION               32771
 #define ID_FILE_HI                      32772
 #define ID_HI                           32773
@@ -97,14 +103,15 @@
 #define ID_DRAW_BLUE                    32785
 #define ID_TAKEOVERTHEWORLD             32786
 #define ID_DRAW                         32787
+#define ID_FORMAT                       32788
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        312
-#define _APS_NEXT_COMMAND_VALUE         32788
-#define _APS_NEXT_CONTROL_VALUE         1004
+#define _APS_NEXT_RESOURCE_VALUE        314
+#define _APS_NEXT_COMMAND_VALUE         32789
+#define _APS_NEXT_CONTROL_VALUE         1011
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif
