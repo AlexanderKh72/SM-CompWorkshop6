@@ -83,6 +83,12 @@
 #define IDS_FIND_TAB                    302
 #define IDS_EXPLORER                    305
 #define IDS_EDIT_MENU                   306
+#define IDD_DIALOG1                     310
+#define IDC_TAKEOVER_CRAFTY             1000
+#define IDC_TAKEOVER_VERYCRAFTY         1001
+#define IDC_BUTTON_TAKEOVER             1002
+#define IDC_EDIT1                       1003
+#define IDC_PASSWORD                    1003
 #define ID_FILE_NEWOPTION               32771
 #define ID_FILE_HI                      32772
 #define ID_HI                           32773
@@ -95,9 +101,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        310
+#define _APS_NEXT_RESOURCE_VALUE        312
 #define _APS_NEXT_COMMAND_VALUE         32786
-#define _APS_NEXT_CONTROL_VALUE         1000
+#define _APS_NEXT_CONTROL_VALUE         1004
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif
