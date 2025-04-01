@@ -66,4 +66,6 @@ public:
 	LOGPEN& getPen();
 	LOGBRUSH& getBrush();
 	void updateclr();
+	afx_msg void OnTakeovertheworld();
+	afx_msg void OnDraw();
 };

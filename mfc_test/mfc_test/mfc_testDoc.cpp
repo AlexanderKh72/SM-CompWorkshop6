@@ -14,6 +14,8 @@
 
 #include <propkey.h>
 
+#include "CDlgTakeover.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -28,6 +30,8 @@ BEGIN_MESSAGE_MAP(CmfctestDoc, CDocument)
 	ON_COMMAND(ID_DRAW_RED, &CmfctestDoc::OnDrawRed)
 	ON_COMMAND(ID_DRAW_GREEN, &CmfctestDoc::OnDrawGreen)
 	ON_COMMAND(ID_DRAW_BLUE, &CmfctestDoc::OnDrawBlue)
+	ON_COMMAND(ID_TAKEOVERTHEWORLD, &CmfctestDoc::OnTakeovertheworld)
+	ON_COMMAND(ID_DRAW, &CmfctestDoc::OnDraw)
 END_MESSAGE_MAP()
 
 
@@ -225,4 +229,17 @@ void CmfctestDoc::updateclr()
 	// TODO: Add your implementation code here.
 	pen.lopnColor = GetClr();
 	brush.lbColor = GetClr();
+}
+
+void CmfctestDoc::OnTakeovertheworld()
+{
+	// TODO: Add your command handler code here
+	CDlgTakeover d;
+	d.DoModal();
+}
+
+void CmfctestDoc::OnDraw()
+{
+	CColorDialog dlg(RGB(0, 0, 0));
+	dlg.DoModal();
 }
