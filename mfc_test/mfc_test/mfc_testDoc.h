@@ -47,14 +47,14 @@ protected:
 #endif // SHARED_HANDLERS
 	int i;
 	int j;
-	COLORREF clr;
+	COLORREF brush_clr;
 
 public:
 	int GetI();
 	int GetJ();
 	afx_msg void OnHi();
 	afx_msg void OnDrawChange();
-	COLORREF GetClr();
+	COLORREF GetBrushClr();
 	afx_msg void OnDrawRed();
 	afx_msg void OnDrawGreen();
 	afx_msg void OnDrawBlue();
@@ -69,4 +69,12 @@ public:
 	afx_msg void OnTakeovertheworld();
 	afx_msg void OnDraw();
 	afx_msg void OnFormat();
+protected:
+	int pen_clr;
+public:
+	int GetPenClr();
+protected:
+	int pen_width;
+public:
+	int GetPenWidth();
 };

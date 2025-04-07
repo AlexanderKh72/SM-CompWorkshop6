@@ -60,13 +60,15 @@ BOOL CmfctestDoc::OnNewDocument()
 	i = 200;
 	j = 300;
 
-	clr = RGB(0, 0, 0);
+	brush_clr = RGB(0, 0, 0);
+	pen_clr = 0;
+	pen_width = 1;
 
-	pen.lopnColor = clr;
+	pen.lopnColor = RGB(0,0,0);
 	pen.lopnWidth.x = 2;
 	
 	brush.lbStyle = BS_SOLID;
-	brush.lbColor = clr;
+	brush.lbColor = brush_clr;
 	
 	return TRUE;
 }
@@ -183,29 +185,29 @@ void CmfctestDoc::OnDrawChange()
 	UpdateAllViews(0);
 }
 
-COLORREF CmfctestDoc::GetClr()
+COLORREF CmfctestDoc::GetBrushClr()
 {
 	// TODO: Add your implementation code here.
-	return clr;
+	return brush_clr;
 }
 
 void CmfctestDoc::OnDrawRed()
 {
-	clr = RGB(255, 0, 0);
+	brush_clr = RGB(255, 0, 0);
 	updateclr();
 	UpdateAllViews(0);
 }
 
 void CmfctestDoc::OnDrawGreen()
 {
-	clr = RGB(0, 255, 0);
+	brush_clr = RGB(0, 255, 0);
 	updateclr();
 	UpdateAllViews(0);
 }
 
 void CmfctestDoc::OnDrawBlue()
 {
-	clr = RGB(0, 0, 255);
+	brush_clr = RGB(0, 0, 255);
 	updateclr();
 	UpdateAllViews(0);
 }
@@ -229,8 +231,8 @@ LOGBRUSH& CmfctestDoc::getBrush()
 void CmfctestDoc::updateclr()
 {
 	// TODO: Add your implementation code here.
-	pen.lopnColor = GetClr();
-	brush.lbColor = GetClr();
+	//pen.lopnColor = GetClr();
+	brush.lbColor = GetBrushClr();
 }
 
 void CmfctestDoc::OnTakeovertheworld()
@@ -242,9 +244,9 @@ void CmfctestDoc::OnTakeovertheworld()
 
 void CmfctestDoc::OnDraw()
 {
-	CColorDialog dlg(clr);
+	CColorDialog dlg(brush_clr);
 	if (dlg.DoModal() == IDOK) {
-		clr = dlg.GetColor();
+		brush_clr = dlg.GetColor();
 		updateclr();
 		UpdateAllViews(0);
 	}
@@ -255,5 +257,34 @@ void CmfctestDoc::OnFormat()
 {
 	// TODO: Add your command handler code here
 	CDlgFormat dlg;
-	dlg.DoModal();
+	dlg.m_color = pen_clr;
+	dlg.m_width = pen_width;
+	if (dlg.DoModal() == IDOK) {
+		getPen().lopnWidth.x = pen_width = dlg.m_width;
+		pen_clr = dlg.m_color;
+		switch (pen_clr) {
+			case 0:
+				getPen().lopnColor = RGB(255, 0, 0);
+				break;
+			case 1:
+				getPen().lopnColor = RGB(0, 255, 0);
+				break;
+			case 2:
+				getPen().lopnColor = RGB(0, 0, 255);
+				break;
+		}
+		UpdateAllViews(0);
+	}
+}
+
+int CmfctestDoc::GetPenClr()
+{
+	// TODO: Add your implementation code here.
+	return pen_clr;
+}
+
+int CmfctestDoc::GetPenWidth()
+{
+	// TODO: Add your implementation code here.
+	return pen_width;
 }

@@ -65,8 +65,10 @@ void CmfctestView::OnDraw(CDC* pDC)
 
 	CBrush brush;
 	brush.CreateBrushIndirect(&(pDoc->getBrush()));
+	CPen pen;
+	pen.CreatePenIndirect(&(pDoc->getPen()));
 	CBrush* pOldBrush = (CBrush*)pDC->SelectObject(&brush);
-	CPen* pOldPen = (CPen*)pDC->SelectStockObject(BLACK_PEN);
+	CPen* pOldPen = (CPen*)pDC->SelectObject(&pen);
 
 	CRect rc;
 	GetClientRect(&rc);
