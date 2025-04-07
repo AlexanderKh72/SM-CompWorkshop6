@@ -24,4 +24,10 @@ protected:
 public:
 	int m_width;
 	int m_color;
+	afx_msg void OnBnClickedOk();
+	afx_msg void OnEnChangeWidth();
+	CEdit m_width_control;
+	afx_msg void OnBnClickedBlue();
+	afx_msg void OnBnClickedGreen();
+	afx_msg void OnBnClickedRed();
 };

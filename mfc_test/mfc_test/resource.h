@@ -91,7 +91,6 @@
 #define IDC_PASSWORD                    1003
 #define IDB_WIDTH                       1006
 #define IDC_GREEN                       1008
-#define IDC_RADIO4                      1009
 #define IDC_BLUE                        1009
 #define IDC_RED                         1010
 #define ID_FILE_NEWOPTION               32771
