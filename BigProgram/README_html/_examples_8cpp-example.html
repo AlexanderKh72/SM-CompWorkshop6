@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Проверка гипотез: Examples.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Проверка гипотез
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_examples_8cpp-example.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Examples.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="comment">// Examples.cpp : This file contains the &#39;main&#39; function. Program execution begins and ends there.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;../BigProgram/DichotomySample.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;../BigProgram/ChengSample.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;../BigProgram/ChiSquare.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keywordtype">double</span> weights1[3] = { 1.0, 2.0, 3.0 };</div>
+<div class="line">    <a id="_a0" name="_a0"></a><a class="code hl_class" href="class_distribution.html">Distribution</a> distr1(weights1, 3);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Create distribution P_1 with weights:\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; weights1[i] &lt;&lt; <span class="stringliteral">&quot;;\t&quot;</span>;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\nProbabilities:\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; distr1.<a id="a1" name="a1"></a><a class="code hl_function" href="class_distribution.html#a115cb999958356e631f06131d0d11fc7">get_p</a>(i) &lt;&lt; <span class="stringliteral">&quot;;\t&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    std::mt19937 gen(42);</div>
+<div class="line"> </div>
+<div class="line">    <a id="_a2" name="_a2"></a><a class="code hl_class" href="class_sample.html">Sample</a>* sample;</div>
+<div class="line">    sample = <span class="keyword">new</span> <a id="_a3" name="_a3"></a><a class="code hl_class" href="class_dichotomy_sample.html">DichotomySample</a>;</div>
+<div class="line">    sample-&gt;<a id="a4" name="a4"></a><a class="code hl_function" href="class_sample.html#a4d246d37fd9c307267b552415118d404">simulate</a>(distr1, 100, gen);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nSample of distribution P_1 (dichotomy simulation method):\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; sample-&gt;<a id="a5" name="a5"></a><a class="code hl_function" href="class_sample.html#a3ce47cbfddfdd0ae9220a08510341ba8">at</a>(i) &lt;&lt; <span class="stringliteral">&quot;;\t&quot;</span>;</div>
+<div class="line">    <span class="keyword">delete</span> sample;</div>
+<div class="line"> </div>
+<div class="line">    sample = <span class="keyword">new</span> <a id="_a6" name="_a6"></a><a class="code hl_class" href="class_cheng_sample.html">ChengSample</a>(4);</div>
+<div class="line">    sample-&gt;<a class="code hl_function" href="class_sample.html#a4d246d37fd9c307267b552415118d404">simulate</a>(distr1, 100, gen);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nSample (1) of distribution P_1 (Cheng simulation method with m=4):\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; sample-&gt;<a class="code hl_function" href="class_sample.html#a3ce47cbfddfdd0ae9220a08510341ba8">at</a>(i) &lt;&lt; <span class="stringliteral">&quot;;\t&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">double</span> weights0[] = { 1,3,3 };</div>
+<div class="line">    <a class="code hl_class" href="class_distribution.html">Distribution</a> distr0(weights0, 3);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCreate distribution P_0 with weights:\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; weights0[i] &lt;&lt; <span class="stringliteral">&quot;;\t&quot;</span>;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\nProbabilities:\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; distr0.<a class="code hl_function" href="class_distribution.html#a115cb999958356e631f06131d0d11fc7">get_p</a>(i) &lt;&lt; <span class="stringliteral">&quot;;\t&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nApply chi-square criteria to Sample (1) and distribution P_0 (H_0 hypothesis):\n&quot;</span>;</div>
+<div class="line">    <a id="_a7" name="_a7"></a><a class="code hl_class" href="class_chi_square.html">ChiSquare</a> chisq(sample, distr0);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;statistic: &quot;</span> &lt;&lt; chisq.<a id="a8" name="a8"></a>get_statistic() &lt;&lt; <span class="stringliteral">&quot;\t df: &quot;</span> &lt;&lt; chisq.<a id="a9" name="a9"></a>get_df() &lt;&lt; <span class="stringliteral">&quot;\t p-value: &quot;</span> &lt;&lt; chisq.<a id="a10" name="a10"></a>get_pvalue();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">delete</span> sample;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_cheng_sample_html"><div class="ttname"><a href="class_cheng_sample.html">ChengSample</a></div><div class="ttdoc">Хранение и моделирование выборки методом Ченга.</div><div class="ttdef"><b>Определения</b> ChengSample.h:7</div></div>
+<div class="ttc" id="aclass_chi_square_html"><div class="ttname"><a href="class_chi_square.html">ChiSquare</a></div><div class="ttdoc">Критерий хи-квадрат.</div><div class="ttdef"><b>Определения</b> ChiSquare.h:14</div></div>
+<div class="ttc" id="aclass_dichotomy_sample_html"><div class="ttname"><a href="class_dichotomy_sample.html">DichotomySample</a></div><div class="ttdoc">Хранение и моделирование выборки методом дихотомии.</div><div class="ttdef"><b>Определения</b> DichotomySample.h:5</div></div>
+<div class="ttc" id="aclass_distribution_html"><div class="ttname"><a href="class_distribution.html">Distribution</a></div><div class="ttdoc">Дискретное распределение.</div><div class="ttdef"><b>Определения</b> Distribution.h:10</div></div>
+<div class="ttc" id="aclass_distribution_html_a115cb999958356e631f06131d0d11fc7"><div class="ttname"><a href="class_distribution.html#a115cb999958356e631f06131d0d11fc7">Distribution::get_p</a></div><div class="ttdeci">double get_p(int k) const</div><div class="ttdef"><b>Определения</b> Distribution.h:16</div></div>
+<div class="ttc" id="aclass_sample_html"><div class="ttname"><a href="class_sample.html">Sample</a></div><div class="ttdoc">Хранения и моделирование выборки.</div><div class="ttdef"><b>Определения</b> Sample.h:9</div></div>
+<div class="ttc" id="aclass_sample_html_a3ce47cbfddfdd0ae9220a08510341ba8"><div class="ttname"><a href="class_sample.html#a3ce47cbfddfdd0ae9220a08510341ba8">Sample::at</a></div><div class="ttdeci">int at(int i) const</div><div class="ttdef"><b>Определения</b> Sample.h:15</div></div>
+<div class="ttc" id="aclass_sample_html_a4d246d37fd9c307267b552415118d404"><div class="ttname"><a href="class_sample.html#a4d246d37fd9c307267b552415118d404">Sample::simulate</a></div><div class="ttdeci">virtual void simulate(const Distribution &amp;distr, int sz, std::mt19937 &amp;gen)=0</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

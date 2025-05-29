@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Моделировани выборки и критерий хи-квадрат", "index.html", [
+  [ "Проверка гипотез", "index.html", [
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
       [ "Алфавитный указатель классов", "classes.html", null ],
@@ -36,7 +36,8 @@ var NAVTREE =
     ] ],
     [ "Файлы", "files.html", [
       [ "Файлы", "files.html", "files_dup" ]
-    ] ]
+    ] ],
+    [ "Примеры", "examples.html", "examples" ]
   ] ]
 ];
 

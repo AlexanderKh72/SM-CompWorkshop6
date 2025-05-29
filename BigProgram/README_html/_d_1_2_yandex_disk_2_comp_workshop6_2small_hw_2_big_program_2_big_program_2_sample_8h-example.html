@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Проверка гипотез: D:/YandexDisk/CompWorkshop6/small_hw/BigProgram/BigProgram/Sample.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Проверка гипотез
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_d_1_2_yandex_disk_2_comp_workshop6_2small_hw_2_big_program_2_big_program_2_sample_8h-example.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D:/YandexDisk/CompWorkshop6/small_hw/BigProgram/BigProgram/Sample.h</div></div>
+</div><!--header-->
+<div class="contents">
+<p>Что-то про пример.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="line"><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;Distribution.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a id="_a0" name="_a0"></a><a class="code hl_class" href="class_sample.html">Sample</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a class="code hl_class" href="class_sample.html">Sample</a>() : sample(<span class="keyword">nullptr</span>), nstates(0) {}</div>
+<div class="line">    <span class="keyword">virtual</span> <a class="code hl_class" href="class_sample.html">~Sample</a>() { <span class="keyword">delete</span>[] sample; }</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="class_sample.html#a4d246d37fd9c307267b552415118d404">simulate</a>(<span class="keyword">const</span> <a id="_a2" name="_a2"></a><a class="code hl_class" href="class_distribution.html">Distribution</a>&amp; distr, <span class="keywordtype">int</span> sz, std::mt19937&amp; gen) = 0; </div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a3" name="a3"></a><a class="code hl_function" href="class_sample.html#a3ce47cbfddfdd0ae9220a08510341ba8">at</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (i &gt;= 0 &amp;&amp; i &lt; nstates) <span class="keywordflow">return</span> sample[i]; <span class="keywordflow">return</span> 0; } </div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a4" name="a4"></a><a class="code hl_function" href="class_sample.html#a64c0fc6d9c7de95408dd3b587d909bbe">size</a>() <span class="keyword">const</span>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a5" name="a5"></a><a class="code hl_function" href="class_sample.html#a866bd420cd560817ea192d83ebef6496">getNstates</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> nstates; }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">    <span class="keywordtype">int</span>* sample;</div>
+<div class="line">    <span class="keywordtype">int</span> nstates;</div>
+<div class="line">};</div>
+<div class="ttc" id="aclass_distribution_html"><div class="ttname"><a href="class_distribution.html">Distribution</a></div><div class="ttdoc">Дискретное распределение.</div><div class="ttdef"><b>Определения</b> Distribution.h:10</div></div>
+<div class="ttc" id="aclass_sample_html"><div class="ttname"><a href="class_sample.html">Sample</a></div><div class="ttdoc">Хранения и моделирование выборки.</div><div class="ttdef"><b>Определения</b> Sample.h:9</div></div>
+<div class="ttc" id="aclass_sample_html_a3ce47cbfddfdd0ae9220a08510341ba8"><div class="ttname"><a href="class_sample.html#a3ce47cbfddfdd0ae9220a08510341ba8">Sample::at</a></div><div class="ttdeci">int at(int i) const</div><div class="ttdef"><b>Определения</b> Sample.h:18</div></div>
+<div class="ttc" id="aclass_sample_html_a4d246d37fd9c307267b552415118d404"><div class="ttname"><a href="class_sample.html#a4d246d37fd9c307267b552415118d404">Sample::simulate</a></div><div class="ttdeci">virtual void simulate(const Distribution &amp;distr, int sz, std::mt19937 &amp;gen)=0</div><div class="ttdoc">Функция Sample::simulate моделирует выборку размера sz с распределением описанным в distr,...</div></div>
+<div class="ttc" id="aclass_sample_html_a64c0fc6d9c7de95408dd3b587d909bbe"><div class="ttname"><a href="class_sample.html#a64c0fc6d9c7de95408dd3b587d909bbe">Sample::size</a></div><div class="ttdeci">int size() const</div><div class="ttdef"><b>Определения</b> Sample.cpp:3</div></div>
+<div class="ttc" id="aclass_sample_html_a866bd420cd560817ea192d83ebef6496"><div class="ttname"><a href="class_sample.html#a866bd420cd560817ea192d83ebef6496">Sample::getNstates</a></div><div class="ttdeci">int getNstates() const</div><div class="ttdef"><b>Определения</b> Sample.h:22</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
