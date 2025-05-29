@@ -2,9 +2,9 @@ var NAVTREEINDEX0 =
 {
 "_cheng_sample_8h_source.html":[1,0,0],
 "_chi_square_8h_source.html":[1,0,1],
-"_d_1_2_yandex_disk_2_comp_workshop6_2small_hw_2_big_program_2_big_program_2_sample_8h-example.html":[2,0],
 "_dichotomy_sample_8h_source.html":[1,0,2],
 "_distribution_8h_source.html":[1,0,3],
+"_examples_8cpp-example.html":[2,0],
 "_sample_8h_source.html":[1,0,4],
 "annotated.html":[0,0],
 "class_cheng_sample.html":[0,0,0],
