@@ -8,5 +8,10 @@
 /mfc_test/x64/
 /mfc_test/.vs/
 /mfc_test/mfc_test/x64/
+/BigProgram/x64/
+/BigProgram/.vs/
+/BigProgram/BigProgram/x64/
+/BigProgram/Examples/x64/
+/BigProgram/BigProgram/latex/
 *.vcxproj.filters
 *.vcxproj.user
