@@ -1,0 +1,4 @@
+\_form#0:$m$
+\_form#1:$p_k$
+\_form#2:$(w_0, \ldots, w_{n-1})$
+\_form#3:$p_k = w_k / \sum_{i=0}^{n-1} w_i$
