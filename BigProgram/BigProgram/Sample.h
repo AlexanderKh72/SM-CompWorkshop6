@@ -10,8 +10,11 @@ class Sample {
 public:
 	Sample() : sample(nullptr), nstates(0) {}
 	virtual ~Sample() { delete[] sample; }
+	/** @example{Examples.cpp}
+	 * Что-то про пример.
+	 */
 	virtual void simulate(const Distribution& distr, int sz, std::mt19937& gen) = 0; 
-	/**< Функция Sample::simulate моделирует выборку размера sz с распределением описанным в distr, используя генератор случайных чисел gen. */
+	/**< @brief Функция Sample::simulate моделирует выборку размера sz с распределением описанным в distr, используя генератор случайных чисел gen. */
 	int at(int i) const { if (i >= 0 && i < nstates) return sample[i]; return 0; } 
 	/**< Функция Sample::at даёт безопасный доступ к элементам сгруппированной выборки. Sample::at(i) возвращает количество значений в выборке равных i. */
 	int size() const;

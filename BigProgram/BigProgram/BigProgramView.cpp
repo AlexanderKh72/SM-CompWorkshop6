@@ -1,4 +1,4 @@
-
+﻿
 // BigProgramView.cpp : implementation of the CBigProgramView class
 //
 
@@ -66,9 +66,80 @@ void CBigProgramView::OnDraw(CDC* pDC)
 	int W = rc.Width(), H = rc.Height();
 	switch (pDoc->get_mode()) {
 		case M_SAMPLE:
+		{
+			int nstates = pDoc->get_chisq().getNstates();
+			const int* emp_freq = pDoc->get_chisq().get_emp_freq();
+			const double* theor_freq = pDoc->get_chisq().get_theor_freq();
+			
 			if (!(pDoc->getSample()))
 				return;
-			pDoc->get_chisq().histogram(pDC, W, H);
+
+			TRACE("\n\n");
+			for (int i = 0; i < nstates; ++i) {
+				TRACE("%d: %d\n", i, emp_freq[i]);
+			}
+			TRACE("\n\n");
+
+			CBrush brush;
+			brush.CreateSolidBrush(RGB(0, 0, 200));
+			CBrush* pOldBrush = (CBrush*)pDC->SelectObject(&brush);
+			CPen* pOldPen = (CPen*)pDC->SelectStockObject(BLACK_PEN);
+
+			int x0 = W / 22, y0 = 14 * H / 15;
+
+			pDC->MoveTo(x0, y0);
+			pDC->LineTo(x0, H / 15);
+			pDC->MoveTo(x0, y0);
+			pDC->LineTo(21 * W / 22, y0);
+
+			double min_v = emp_freq[0], max_v = emp_freq[0];
+			for (int i = 0; i < nstates; ++i) {
+				if (emp_freq[i] < min_v)
+					min_v = emp_freq[i];
+				if (emp_freq[i] > max_v)
+					max_v = emp_freq[i];
+				if (theor_freq[i] < min_v)
+					min_v = theor_freq[i];
+				if (theor_freq[i] > max_v)
+					max_v = theor_freq[i];
+			}
+
+			int dx = (5 * W) / (22 * nstates);
+			double dy = double(13 * H) / (max_v * 15);
+
+			for (int i = 0, x = x0 + dx; i < nstates; ++i, x += 4 * dx) {
+				pDC->Rectangle(x, y0, x + 3 * dx, int(y0 - dy * emp_freq[i]));
+			}
+			brush.DeleteObject();
+			brush.CreateSolidBrush(RGB(255, 71, 202));
+			pDC->SelectObject(&brush);
+			CString str;
+			pDC->SetTextAlign(TA_TOP | TA_LEFT);
+			for (int i = 0, x = x0 + dx; i < nstates; ++i, x += 4 * dx) {
+				pDC->Rectangle(x + dx, y0, x + 2 * dx, int(y0 - dy * theor_freq[i]));
+				str.Format(L"%d", i);
+				pDC->TextOut(x + dx, y0 + 2, str);
+			}
+
+			pDC->MoveTo(x0, int(y0 - dy * min_v));
+			pDC->LineTo(x0 + 10, int(y0 - dy * min_v));
+			pDC->MoveTo(x0, int(y0 - dy * max_v));
+			pDC->LineTo(x0 + 10, int(y0 - dy * max_v));
+
+			pDC->SetTextAlign(TA_TOP | TA_RIGHT);
+			str.Format(L"%.1f", min_v);
+			pDC->TextOut(x0 - 3, int(y0 - dy * min_v), str);
+			str.Format(L"%.1f", max_v);
+			pDC->TextOut(x0 - 3, int(y0 - dy * max_v), str);
+
+			pDC->SetTextAlign(TA_TOP | TA_LEFT);
+			str.Format(L"chisq: %f, df: %d, p-value: %f", pDoc->get_chisq().get_statistic(), pDoc->get_chisq().get_df(), pDoc->get_chisq().get_pvalue());
+			pDC->TextOut(0, 0, str);
+
+			pDC->SelectObject(pOldBrush);
+			pDC->SelectObject(pOldPen);
+			brush.DeleteObject();
+		}
 			break;
 		case M_PVALUE:
 		{

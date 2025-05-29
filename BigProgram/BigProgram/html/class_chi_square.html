@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Моделировани выборки и критерий хи-квадрат: Класс ChiSquare</title>
+<title>Проверка гипотез: Класс ChiSquare</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Моделировани выборки и критерий хи-квадрат
+   <div id="projectname">Проверка гипотез
    </div>
   </td>
  </tr>
@@ -102,14 +102,18 @@ $(function(){initNavTree('class_chi_square.html','','class_chi_square-members');
 <tr class="memitem:ae18ead7e4ca14a3c1e37ac316314b83c" id="r_ae18ead7e4ca14a3c1e37ac316314b83c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae18ead7e4ca14a3c1e37ac316314b83c">ChiSquare</a> (<a class="el" href="class_sample.html">Sample</a> *sample, <a class="el" href="class_distribution.html">Distribution</a> &amp;distr)</td></tr>
 <tr class="memitem:acb02cc0856bab754fc5a0df270af8633" id="r_acb02cc0856bab754fc5a0df270af8633"><td class="memItemLeft" align="right" valign="top"><a id="acb02cc0856bab754fc5a0df270af8633" name="acb02cc0856bab754fc5a0df270af8633"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="class_sample.html">Sample</a> *sample, <a class="el" href="class_distribution.html">Distribution</a> &amp;distr)</td></tr>
-<tr class="memitem:a4111e957e2ec486c6f96f6df2411a68c" id="r_a4111e957e2ec486c6f96f6df2411a68c"><td class="memItemLeft" align="right" valign="top"><a id="a4111e957e2ec486c6f96f6df2411a68c" name="a4111e957e2ec486c6f96f6df2411a68c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>histogram</b> (CDC *pDC, int W, int H) const</td></tr>
 <tr class="memitem:a7af6bc2a533b2da601f10f2fdd097beb" id="r_a7af6bc2a533b2da601f10f2fdd097beb"><td class="memItemLeft" align="right" valign="top"><a id="a7af6bc2a533b2da601f10f2fdd097beb" name="a7af6bc2a533b2da601f10f2fdd097beb"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>get_pvalue</b> () const</td></tr>
 <tr class="memitem:aa632d59aa2289aed6d9f688dceaafcaf" id="r_aa632d59aa2289aed6d9f688dceaafcaf"><td class="memItemLeft" align="right" valign="top"><a id="aa632d59aa2289aed6d9f688dceaafcaf" name="aa632d59aa2289aed6d9f688dceaafcaf"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>get_statistic</b> () const</td></tr>
 <tr class="memitem:a361609a1a2d81e24647fadd90745b0a5" id="r_a361609a1a2d81e24647fadd90745b0a5"><td class="memItemLeft" align="right" valign="top"><a id="a361609a1a2d81e24647fadd90745b0a5" name="a361609a1a2d81e24647fadd90745b0a5"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_df</b> () const</td></tr>
+<tr class="memitem:a9903bb5316f30e2e47df8fb114f2c440" id="r_a9903bb5316f30e2e47df8fb114f2c440"><td class="memItemLeft" align="right" valign="top"><a id="a9903bb5316f30e2e47df8fb114f2c440" name="a9903bb5316f30e2e47df8fb114f2c440"></a>
+const int *&#160;</td><td class="memItemRight" valign="bottom"><b>get_emp_freq</b> () const</td></tr>
+<tr class="memitem:a1fa321c0752a78a2ab436e227c1cbf05" id="r_a1fa321c0752a78a2ab436e227c1cbf05"><td class="memItemLeft" align="right" valign="top"><a id="a1fa321c0752a78a2ab436e227c1cbf05" name="a1fa321c0752a78a2ab436e227c1cbf05"></a>
+const double *&#160;</td><td class="memItemRight" valign="bottom"><b>get_theor_freq</b> () const</td></tr>
+<tr class="memitem:a32dfdb2546bc1e8228959e95b0410d7e" id="r_a32dfdb2546bc1e8228959e95b0410d7e"><td class="memItemLeft" align="right" valign="top"><a id="a32dfdb2546bc1e8228959e95b0410d7e" name="a32dfdb2546bc1e8228959e95b0410d7e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getNstates</b> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Защищенные члены</h2></td></tr>

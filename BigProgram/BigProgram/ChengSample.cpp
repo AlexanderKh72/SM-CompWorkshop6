@@ -1,5 +1,4 @@
-﻿#include "pch.h"
-#include "ChengSample.h"
+﻿#include "ChengSample.h"
 #include <random>
 
 void ChengSample::simulate(const Distribution& distr, int sz, std::mt19937& gen) {

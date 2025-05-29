@@ -205,13 +205,21 @@
     <ClCompile Include="BigProgram.cpp" />
     <ClCompile Include="BigProgramDoc.cpp" />
     <ClCompile Include="BigProgramView.cpp" />
-    <ClCompile Include="ChengSample.cpp" />
-    <ClCompile Include="ChiSquare.cpp" />
+    <ClCompile Include="ChengSample.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ChiSquare.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="CPValueDlg.cpp" />
     <ClCompile Include="CSimulateDlg.cpp" />
     <ClCompile Include="CTypeIerror.cpp" />
-    <ClCompile Include="DichotomySample.cpp" />
-    <ClCompile Include="Distribution.cpp" />
+    <ClCompile Include="DichotomySample.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Distribution.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -219,8 +227,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="PROBDIST.CPP" />
-    <ClCompile Include="Sample.cpp" />
+    <ClCompile Include="PROBDIST.CPP">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sample.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BigProgram.rc" />

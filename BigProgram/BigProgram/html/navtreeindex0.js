@@ -2,6 +2,7 @@ var NAVTREEINDEX0 =
 {
 "_cheng_sample_8h_source.html":[1,0,0],
 "_chi_square_8h_source.html":[1,0,1],
+"_d_1_2_yandex_disk_2_comp_workshop6_2small_hw_2_big_program_2_big_program_2_sample_8h-example.html":[2,0],
 "_dichotomy_sample_8h_source.html":[1,0,2],
 "_distribution_8h_source.html":[1,0,3],
 "_sample_8h_source.html":[1,0,4],
@@ -22,6 +23,7 @@ var NAVTREEINDEX0 =
 "class_sample.html#a64c0fc6d9c7de95408dd3b587d909bbe":[0,0,4,3],
 "class_sample.html#a866bd420cd560817ea192d83ebef6496":[0,0,4,1],
 "classes.html":[0,1],
+"examples.html":[2],
 "files.html":[1,0],
 "functions.html":[0,3,0],
 "functions_func.html":[0,3,1],

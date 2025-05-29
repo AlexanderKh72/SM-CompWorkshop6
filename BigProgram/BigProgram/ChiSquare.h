@@ -20,10 +20,13 @@ public:
 	*/
 	~ChiSquare();
 	void set(Sample* sample, Distribution& distr);
-	void histogram(CDC* pDC, int W, int H) const;
 	double get_pvalue() const { return pvalue; }
 	double get_statistic() const { return t; }
 	int get_df() const { return df; }
+	const int* get_emp_freq() const { return emp_freq; }
+	const double* get_theor_freq() const { return theor_freq; }
+	int getNstates() const { return nstates; }
+
 
 protected:
 	void calculate();

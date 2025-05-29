@@ -2,7 +2,6 @@
 // Copyright (c) 1995 Crescent Division of Progress Software Corporation
 //
 
-#include "pch.h"
 #include <math.h>
 #include "probdist.h"
 

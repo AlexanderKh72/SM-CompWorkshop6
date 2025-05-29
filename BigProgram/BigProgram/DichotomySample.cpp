@@ -1,5 +1,4 @@
-﻿#include "pch.h"
-#include "DichotomySample.h"
+﻿#include "DichotomySample.h"
 
 void DichotomySample::simulate(const Distribution& distr, int sz, std::mt19937& gen) {
 	int n = distr.get_nstates();

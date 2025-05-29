@@ -1,5 +1,4 @@
-﻿#include "pch.h"
-#include "Sample.h"
+﻿#include "Sample.h"
 
 int Sample::size() const
 {

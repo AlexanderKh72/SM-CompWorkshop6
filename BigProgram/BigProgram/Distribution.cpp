@@ -1,5 +1,4 @@
-﻿#include "pch.h"
-#include "Distribution.h"
+﻿#include "Distribution.h"
 
 Distribution::Distribution(const double* weights, int n) : nstates(n), probs(nullptr) {
 	probs = new double[nstates];
