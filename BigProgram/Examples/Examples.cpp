@@ -14,7 +14,7 @@ int main() {
     for (int i = 0; i < 3; ++i)
         std::cout << i << ": " << weights1[i] << ";\t";
     std::cout << "\nProbabilities:\n";
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < distr1.getNstates(); ++i)
         std::cout << i << ": " << distr1.get_p(i) << ";\t";
 
     std::mt19937 gen(42);
@@ -23,14 +23,14 @@ int main() {
     sample = new DichotomySample;
     sample->simulate(distr1, 100, gen);
     std::cout << "\n\nSample of distribution P_1 (dichotomy simulation method):\n";
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < sample->getNstates(); ++i)
         std::cout << i << ": " << sample->at(i) << ";\t";
     delete sample;
 
     sample = new ChengSample(4);
     sample->simulate(distr1, 100, gen);
     std::cout << "\n\nSample (1) of distribution P_1 (Cheng simulation method with m=4):\n";
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < sample->getNstates(); ++i)
         std::cout << i << ": " << sample->at(i) << ";\t";
 
     double weights0[] = { 1,3,3 };
@@ -39,7 +39,7 @@ int main() {
     for (int i = 0; i < 3; ++i)
         std::cout << i << ": " << weights0[i] << ";\t";
     std::cout << "\nProbabilities:\n";
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < distr0.getNstates(); ++i)
         std::cout << i << ": " << distr0.get_p(i) << ";\t";
 
     std::cout << "\n\nApply chi-square criteria to Sample (1) and distribution P_0 (H_0 hypothesis):\n";

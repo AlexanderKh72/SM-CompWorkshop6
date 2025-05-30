@@ -2,7 +2,7 @@
 #include <random>
 
 void ChengSample::simulate(const Distribution& distr, int sz, std::mt19937& gen) {
-	int n = distr.get_nstates();
+	int n = distr.getNstates();
 	double* s = new double[n];
 	int* r = new int[m];
 

@@ -23,7 +23,7 @@ public:
 		return 0;
 	}
 	void set(const double* weights, int n);
-	int get_nstates() const { return nstates; }
+	int getNstates() const { return nstates; }
 private: 
 	int nstates;
 	double* probs;
